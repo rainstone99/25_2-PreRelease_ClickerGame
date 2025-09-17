@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
     public GameObject prefabObject;
     public GameObject prefabObject2;
     public GameObject prefabObject3;
+    public GameObject prefabObject4;
+    public GameObject prefabObject5;
+    public GameObject prefabObject6;
     List<GameObject> spawndObject = new List<GameObject>();
     public int maxunits = 10; // 추후 시스템 연결
     public void unitSpawnScript()
@@ -51,6 +54,57 @@ public class GameManager : MonoBehaviour
             float spawnPointY = Random.Range(-4.7f, 3.3f);
             Vector2 spawnPoint = new Vector2(spawnPointX, spawnPointY);
             GameObject newObject = Instantiate(prefabObject3, spawnPoint, Quaternion.identity);
+
+            spawndObject.Add(newObject);
+        }
+        else
+        {
+            Debug.Log("유닛 수가 최대입니다.");
+        }
+    }
+    public void unitSpawnScript4()
+    {
+        if (spawndObject.Count < maxunits)
+        {
+            //Debug.Log("test1");
+            float spawnPointX = Random.Range(-2.3f, 2.3f);
+            float spawnPointY = Random.Range(-4.7f, 3.3f);
+            Vector2 spawnPoint = new Vector2(spawnPointX, spawnPointY);
+            GameObject newObject = Instantiate(prefabObject4, spawnPoint, Quaternion.identity);
+
+            spawndObject.Add(newObject);
+        }
+        else
+        {
+            Debug.Log("유닛 수가 최대입니다.");
+        }
+    }
+    public void unitSpawnScript5()
+    {
+        if (spawndObject.Count < maxunits)
+        {
+            //Debug.Log("test1");
+            float spawnPointX = Random.Range(-2.3f, 2.3f);
+            float spawnPointY = Random.Range(-4.7f, 3.3f);
+            Vector2 spawnPoint = new Vector2(spawnPointX, spawnPointY);
+            GameObject newObject = Instantiate(prefabObject5, spawnPoint, Quaternion.identity);
+
+            spawndObject.Add(newObject);
+        }
+        else
+        {
+            Debug.Log("유닛 수가 최대입니다.");
+        }
+    }
+    public void unitSpawnScript6()
+    {
+        if (spawndObject.Count < maxunits)
+        {
+            //Debug.Log("test1");
+            float spawnPointX = Random.Range(-2.3f, 2.3f);
+            float spawnPointY = Random.Range(-4.7f, 3.3f);
+            Vector2 spawnPoint = new Vector2(spawnPointX, spawnPointY);
+            GameObject newObject = Instantiate(prefabObject6, spawnPoint, Quaternion.identity);
 
             spawndObject.Add(newObject);
         }
