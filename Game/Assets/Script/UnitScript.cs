@@ -4,10 +4,13 @@ using UnityEngine;
 public class UnitScript : MonoBehaviour
 {
     Vector2 objectPosition;
+    public static int gameMoney = 0;
     float moveSpeed;
+
     void Start()
     {
         StartCoroutine("randomMove");
+        gameMoney += 1;
     }
     void Update()
     {
@@ -15,6 +18,7 @@ public class UnitScript : MonoBehaviour
         Vector2.MoveTowards(transform.position, objectPosition, moveSpeed * Time.deltaTime);
 
     }
+
     IEnumerator randomMove()
     {
         while (true)

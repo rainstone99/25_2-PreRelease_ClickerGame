@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
     public GameObject prefabObject;
     public GameObject prefabObject2;
     public GameObject prefabObject3;
@@ -11,6 +12,14 @@ public class GameManager : MonoBehaviour
     public GameObject prefabObject6;
     List<GameObject> spawndObject = new List<GameObject>();
     public int maxunits = 10; // 추후 시스템 연결
+    public int currentUnits;
+    void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else if (Instance != this)
+            Destroy(gameObject);
+    }
     public void unitSpawnScript()
     {
         if (spawndObject.Count < maxunits)
@@ -22,6 +31,8 @@ public class GameManager : MonoBehaviour
             GameObject newObject = Instantiate(prefabObject, spawnPoint, Quaternion.identity);
 
             spawndObject.Add(newObject);
+            currentUnits = spawndObject.Count;
+            
         }
         else
         {
@@ -39,6 +50,7 @@ public class GameManager : MonoBehaviour
             GameObject newObject = Instantiate(prefabObject2, spawnPoint, Quaternion.identity);
 
             spawndObject.Add(newObject);
+            currentUnits = spawndObject.Count;
         }
         else
         {
@@ -56,6 +68,7 @@ public class GameManager : MonoBehaviour
             GameObject newObject = Instantiate(prefabObject3, spawnPoint, Quaternion.identity);
 
             spawndObject.Add(newObject);
+            currentUnits = spawndObject.Count;
         }
         else
         {
@@ -73,6 +86,7 @@ public class GameManager : MonoBehaviour
             GameObject newObject = Instantiate(prefabObject4, spawnPoint, Quaternion.identity);
 
             spawndObject.Add(newObject);
+            currentUnits = spawndObject.Count;
         }
         else
         {
@@ -90,6 +104,7 @@ public class GameManager : MonoBehaviour
             GameObject newObject = Instantiate(prefabObject5, spawnPoint, Quaternion.identity);
 
             spawndObject.Add(newObject);
+            currentUnits = spawndObject.Count;
         }
         else
         {
@@ -107,6 +122,7 @@ public class GameManager : MonoBehaviour
             GameObject newObject = Instantiate(prefabObject6, spawnPoint, Quaternion.identity);
 
             spawndObject.Add(newObject);
+            currentUnits = spawndObject.Count;
         }
         else
         {
