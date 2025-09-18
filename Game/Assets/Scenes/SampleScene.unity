@@ -241,7 +241,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -31.348389}
+  m_margin: {x: 0, y: 0, z: -388.79797, w: -31.348389}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -496,11 +496,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1013496405}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: unitSpawnScript3
-        m_Mode: 1
+        m_MethodName: unitSpawnScript
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 8551908318570197562, guid: 0560bbbe577b07240a17bc1549ff5f70, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2254,11 +2254,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1013496405}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: unitSpawnScript4
-        m_Mode: 1
+        m_MethodName: unitSpawnScript
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 273259664185017687, guid: da539ffa6bbc42449b869e5c797d25b1, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2450,6 +2450,7 @@ GameObject:
   - component: {fileID: 876666503}
   - component: {fileID: 876666502}
   - component: {fileID: 876666501}
+  - component: {fileID: 876666505}
   m_Layer: 5
   m_Name: Main
   m_TagString: Untagged
@@ -2544,6 +2545,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &876666505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876666500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d1401b34a19d1e4e8466fb2a0f93c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UnitMax: {fileID: 1287708701}
+  walletUi: {fileID: 55126498}
 --- !u!1 &923356921
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,13 +2802,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71ac7761225ff740ac5457790705547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabObject: {fileID: 8282594300847456979, guid: 6d873df2e96d38b45bbe8bcd4dc7a57a, type: 3}
-  prefabObject2: {fileID: 6997318836219685787, guid: f741086c9bbadaa47ab8a2189f0af829, type: 3}
-  prefabObject3: {fileID: 8551908318570197562, guid: 0560bbbe577b07240a17bc1549ff5f70, type: 3}
-  prefabObject4: {fileID: 273259664185017687, guid: da539ffa6bbc42449b869e5c797d25b1, type: 3}
-  prefabObject5: {fileID: 2589304332045838926, guid: fb535b6cbbe01154d9695f971e605934, type: 3}
-  prefabObject6: {fileID: 6744987789272574266, guid: 9d96271a677ebbe42b28336f8cdb0406, type: 3}
-  maxunits: 10
 --- !u!4 &1013496406
 Transform:
   m_ObjectHideFlags: 0
@@ -2978,11 +2986,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1013496405}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: unitSpawnScript2
-        m_Mode: 1
+        m_MethodName: unitSpawnScript
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 6997318836219685787, guid: f741086c9bbadaa47ab8a2189f0af829, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3860,7 +3868,6 @@ GameObject:
   - component: {fileID: 1287708700}
   - component: {fileID: 1287708702}
   - component: {fileID: 1287708701}
-  - component: {fileID: 1287708703}
   m_Layer: 5
   m_Name: UnitAmount
   m_TagString: Untagged
@@ -3972,7 +3979,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -31.348389}
+  m_margin: {x: 0, y: 0, z: -211.55142, w: -31.348389}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3986,18 +3993,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287708699}
   m_CullTransparentMesh: 1
---- !u!114 &1287708703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287708699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d1401b34a19d1e4e8466fb2a0f93c65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1294367773
 GameObject:
   m_ObjectHideFlags: 0
@@ -5037,11 +5032,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1013496405}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: unitSpawnScript6
-        m_Mode: 1
+        m_MethodName: unitSpawnScript
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 6744987789272574266, guid: 9d96271a677ebbe42b28336f8cdb0406, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5531,10 +5526,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1013496405}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: unitSpawnScript
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 8282594300847456979, guid: 6d873df2e96d38b45bbe8bcd4dc7a57a, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6940,11 +6935,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1013496405}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: unitSpawnScript5
-        m_Mode: 1
+        m_MethodName: unitSpawnScript
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2589304332045838926, guid: fb535b6cbbe01154d9695f971e605934, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
