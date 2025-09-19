@@ -12,7 +12,7 @@ public class UiScript : MonoBehaviour
     }
     public void wallet()
     {
-        walletUi.text = "골드 : " + UnitScript.gameMoney + "G";
+        walletUi.text = "골드 : " + GameManager.gameMoney + "G";
     }
     public void Text()
     {

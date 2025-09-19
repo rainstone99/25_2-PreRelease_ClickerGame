@@ -1,22 +1,23 @@
 using System.Collections;
+using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 
 public class UnitScript : MonoBehaviour
 {
     Vector2 objectPosition;
-    public static int gameMoney = 0;
+    public int UnitgainGold;
     float moveSpeed;
 
     void Start()
     {
         StartCoroutine("randomMove");
-        gameMoney += 1;
+        StopCoroutine("CreatMoneyTime");
+        StartCoroutine("CreatMoneyTime");
     }
     void Update()
     {
         transform.position =
         Vector2.MoveTowards(transform.position, objectPosition, moveSpeed * Time.deltaTime);
-
     }
 
     IEnumerator randomMove()
@@ -31,5 +32,18 @@ public class UnitScript : MonoBehaviour
             float randomTime = Random.Range(1f, 7f);
             yield return new WaitForSeconds(randomTime);
         }
+    }
+    IEnumerator CreatMoneyTime()
+    {
+        while (true)
+        {
+            GameManager.gameMoney = CreatMoney(UnitgainGold);
+            yield return new WaitForSeconds(1f);
+        }
+    }
+    int CreatMoney(int UnitGainGold)
+    {
+        GameManager.gameMoney = GameManager.gameMoney + UnitGainGold;
+        return GameManager.gameMoney;
     }
 }
