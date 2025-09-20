@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -35,7 +37,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("골드가 부족합니다."); //추후 팝업창으로 수정
         }
-        else if(spawndObject.Count >= maxunits)
+        else if (spawndObject.Count >= maxunits)
         {
             Debug.Log("유닛 수가 최대입니다.");
         }
@@ -52,5 +54,12 @@ public class GameManager : MonoBehaviour
     {
         GameManager.gameMoney = GameManager.gameMoney + TotalGainGold;
         return GameManager.gameMoney;
+    }
+    public void TouchGold(InputAction.CallbackContext context)
+    {
+        if (context.performed && EventSystem.current.IsPointerOverGameObject())
+        {
+            gameMoney += 1;
+        }
     }
 }
