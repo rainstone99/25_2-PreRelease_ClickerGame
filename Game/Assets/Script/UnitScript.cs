@@ -13,6 +13,8 @@ public class UnitScript : MonoBehaviour
         StartCoroutine("randomMove");
         StopCoroutine("CreatMoneyTime");
         StartCoroutine("CreatMoneyTime");
+    }
+    void OnEnable() {
         GameManager.TotalGainGold += UnitgainGold;
     }
     void Update()
