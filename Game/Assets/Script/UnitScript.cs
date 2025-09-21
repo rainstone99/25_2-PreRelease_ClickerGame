@@ -3,18 +3,16 @@ using UnityEngine;
 
 public class UnitScript : MonoBehaviour
 {
-    Vector2 objectPosition;
+    Vector2 objectPosition; 
     public int UnitgainGold;
     public int UnitPrice;
     float moveSpeed;
-
     void Start()
     {
         StartCoroutine("randomMove");
-        StopCoroutine("CreatMoneyTime");
-        StartCoroutine("CreatMoneyTime");
     }
-    void OnEnable() {
+    void OnEnable()
+    {
         GameManager.TotalGainGold += UnitgainGold;
     }
     void Update()
@@ -24,9 +22,8 @@ public class UnitScript : MonoBehaviour
     }
     void OnDestroy()
     {
-        
+        GameManager.gameMoney += UnitPrice / 10;
     }
-
     IEnumerator randomMove()
     {
         while (true)

@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UiScript : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class UiScript : MonoBehaviour
     public TextMeshProUGUI UserNameUi;
     public TextMeshProUGUI CurrentUnitUi;
     public TextMeshProUGUI GainGoldUi;
+    public TextMeshProUGUI touchGainGoldUi;
+    public TextMeshProUGUI touchUpgradePriceUi;
+    public TextMeshProUGUI addMaxLimitPriceUi;
     public void Update()
     {
         if (UnitMax != null)
@@ -30,6 +34,18 @@ public class UiScript : MonoBehaviour
         {
             GainGoldText();
         }
+        if (touchGainGoldUi != null)
+        {
+            TouchGainGoldText();
+        }
+        if (touchUpgradePriceUi != null)
+        {
+            TouchUpgradePrice();
+        }
+        if (addMaxLimitPriceUi != null)
+        {
+            AddMaxLimitPrice();
+        }
     }
     public void wallet()
     {
@@ -37,7 +53,7 @@ public class UiScript : MonoBehaviour
     }
     public void UnitText()
     {
-        UnitMax.text = "유닛 수 : " + GameManager.currentUnits + "/" + GameManager.maxunits;
+        UnitMax.text = "유닛 수 : " + GameManager.currentUnits + "/" + GameManager.maxUnits;
     }
     public void NameText()
     {
@@ -45,10 +61,23 @@ public class UiScript : MonoBehaviour
     }
     public void CurrentUnit()
     {
-        CurrentUnitUi.text = "현재 유닛 수 : " + GameManager.currentUnits + "/" + GameManager.maxunits;
+        CurrentUnitUi.text = "현재 유닛 수 : " + GameManager.currentUnits + "/" + GameManager.maxUnits;
     }
     public void GainGoldText()
     {
         GainGoldUi.text = "초당 골드 생산량 : " + GameManager.TotalGainGold + "G";
+    }
+    public void TouchGainGoldText()
+    {
+        touchGainGoldUi.text = "터치 골드 생산량 (Level)\n: " + GameManager.touchGainGold
+                             + "G(" + GameManager.touchUpgradeLevel + "Level)";
+    }
+    public void TouchUpgradePrice()
+    {
+        touchUpgradePriceUi.text = "구매(" + GameManager.touchUpgradePrice + "G)";
+    }
+    public void AddMaxLimitPrice()
+    {
+        addMaxLimitPriceUi.text = "구매(" + GameManager.maxLimitUpgradePrice + "G)";
     }
 }
