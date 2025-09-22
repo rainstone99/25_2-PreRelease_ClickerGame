@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         spawndObject.Clear();
+        unitInstancesByType.Clear();
         maxUnits = 3;
         currentUnits = 0;
         gameMoney = 50000;
@@ -149,5 +150,10 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("판매할 유닛이 없습니다.");
         }
+        /*
+        spawndObject.Remove(prefab) // 리스트 제거
+        GameObject.Destroy(prefab) // 씬에서 오브젝트 제거
+        currentUnits = spawndObject.Count // 유닛 수 동기화
+        */
     }
 }

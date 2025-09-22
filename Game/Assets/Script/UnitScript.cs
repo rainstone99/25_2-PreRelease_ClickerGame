@@ -23,6 +23,7 @@ public class UnitScript : MonoBehaviour
     void OnDestroy()
     {
         GameManager.gameMoney += UnitPrice / 10;
+        GameManager.TotalGainGold -= UnitgainGold;
     }
     IEnumerator randomMove()
     {
